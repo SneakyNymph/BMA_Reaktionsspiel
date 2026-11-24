@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
+    <avrdevice>ATtiny3226</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>BMA_Tisch_Reaktionsspiel</AssemblyName>
+    <Name>BMA_Tisch_Reaktionsspiel</Name>
+    <RootNamespace>BMA_Tisch_Reaktionsspiel</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <ResetRule>0</ResetRule>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <EraseKey />
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.52.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.atmelice</avrtool>
+    <avrtoolserialnumber>J42700049088</avrtoolserialnumber>
+    <avrdeviceexpectedsignature>0x1E9527</avrdeviceexpectedsignature>
+    <avrtoolinterface>UPDI</avrtoolinterface>
+    <com_atmel_avrdbg_tool_atmelice>
+      <ToolOptions>
+        <InterfaceProperties>
+          <UpdiClock>500000</UpdiClock>
+        </InterfaceProperties>
+        <InterfaceName>UPDI</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.atmelice</ToolType>
+      <ToolNumber>J42700049088</ToolNumber>
+      <ToolName>Atmel-ICE</ToolName>
+    </com_atmel_avrdbg_tool_atmelice>
+    <avrtoolinterfaceclock>500000</avrtoolinterfaceclock>
+    <custom>
+      <ToolOptions xmlns="">
+        <InterfaceProperties>
+        </InterfaceProperties>
+        <InterfaceName>UPDI</InterfaceName>
+      </ToolOptions>
+      <ToolType xmlns="">custom</ToolType>
+      <ToolNumber xmlns="">
+      </ToolNumber>
+      <ToolName xmlns="">Custom Programming Tool</ToolName>
+    </custom>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.Device>-mmcu=attiny3226 -B "%24(PackRepoDir)\atmel\ATtiny_DFP\1.10.348\gcc\dev\attiny3226"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATtiny_DFP\1.10.348\include\</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATtiny_DFP\1.10.348\include\</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.Device>-mmcu=attiny3226 -B "%24(PackRepoDir)\atmel\ATtiny_DFP\1.10.348\gcc\dev\attiny3226"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>..</Value>
+            <Value>%24(PackRepoDir)\atmel\ATtiny_DFP\1.10.348\include\</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATtiny_DFP\1.10.348\include\</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+        <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="include\bsp\battLEDs.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\bsp\buttons.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\bsp\buzzer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\bsp\debug.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\driver\BQ25883.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\driver\BQ25883_Registers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\driver\BQ76905.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\driver\BQ76905_Balance.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\driver\LP5814.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\driver\LP5814_Registers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\driver\TCA9555.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\driver\WS2812.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\hal\GPIO.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\hal\Sleep.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\hal\System.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\hal\TWI.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\hal\VddMonitor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\Service\BatteryService.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\Service\BMS_Profile.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\bsp\battLEDs.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\bsp\buttons.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\bsp\buzzer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\bsp\debug.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\driver\BQ25883.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\driver\BQ76905.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\driver\BQ76905_Balance.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\driver\LP5814.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\driver\TCA9555.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\driver\WS2812.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\hal\GPIO.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\hal\Sleep.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\hal\System.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\hal\TWI.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\hal\VddMonitor.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\hal\VddMonitorCalc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Service\BatteryService.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Service\BMS_Profile.c">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="include" />
+    <Folder Include="include\hal" />
+    <Folder Include="include\driver" />
+    <Folder Include="include\bsp" />
+    <Folder Include="include\app" />
+    <Folder Include="include\Service" />
+    <Folder Include="src" />
+    <Folder Include="src\hal" />
+    <Folder Include="src\driver" />
+    <Folder Include="src\bsp" />
+    <Folder Include="src\app" />
+    <Folder Include="src\Service" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
